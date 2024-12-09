@@ -18,16 +18,13 @@
 <head>
     <title>Payment Success</title>
     <script>
-        // Optional: Automatically redirect after a few seconds
-        setTimeout(function() {
-            document.getElementById('closeButton').style.display = 'block';  // Show the button after a few seconds
-        }, 3000);  // Wait for 3 seconds
+        // Wait for 3 seconds
     </script>
 </head>
 <body>
     <p>Redirecting to the app...</p>
     
     <!-- Initially hidden button -->
-    <button id="closeButton" style="display:none;" onclick="window.close();">Go back to the merchant's page</button>
+    <button id="closeButton" style="display:block;" onclick="window.close();">Go back to the merchant's page</button>
 </body>
 </html>
