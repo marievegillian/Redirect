@@ -1,10 +1,27 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 <head>
     <title>Payment Success</title>
     <script>
         // Redirect to your app after payment
         window.location.href = "yourapp://profile";
+    </script>
+</head>
+<body>
+    <p>Redirecting to the app...</p>
+</body>
+</html>
+ -->
+
+ <!DOCTYPE html>
+<html>
+<head>
+    <title>Payment Success</title>
+    <script>
+        // Wait for a few seconds before closing the page
+        setTimeout(function() {
+            window.close();  // Close the current window
+        }, 3000);  // 3000 milliseconds = 3 seconds
     </script>
 </head>
 <body>
