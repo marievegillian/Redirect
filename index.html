@@ -16,11 +16,16 @@
 <html>
 <head>
     <title>Payment Success</title>
+    <script>
+        // Redirect to your app's deep link after a delay
+        setTimeout(() => {
+            window.location.href = "yourapp://";
+        }, 1000); // Adjust delay as needed
+    </script>
 </head>
 <body>
-    <p>Redirecting to the app...</p>
-    
-    <!-- Visible button that closes the window when clicked -->
-    <button onclick="window.close();">Go back to the merchant's page</button>
+    <h1>Payment Successful!</h1>
+    <p>Redirecting you back to the app...</p>
+    <button onclick="window.location.href = 'yourapp://';">Go Back to App</button>
 </body>
 </html>
