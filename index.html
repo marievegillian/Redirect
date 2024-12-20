@@ -7,17 +7,17 @@
     <style>
         body {
             margin: 0;
-            padding: 0;
+            padding: 16px; /* Adds space around the card */
             font-family: Arial, sans-serif;
             height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            position: relative; /* To make ::before position relative to body */
-            overflow: hidden; /* Ensures no overflow issues */
-	    background-color: #f4f6f9;
+            position: relative;
+            overflow: hidden;
+            background-color: #f4f6f9; /* Neutral background */
         }
-    
+
         body::before {
             content: "";
             position: absolute;
@@ -28,18 +28,19 @@
             background-image: url('assets/Logo.svg');
             background-size: 50px 50px;
             background-repeat: repeat;
-            opacity: 0.2; /* Adjust transparency here (0 = fully transparent, 1 = opaque) */
-            z-index: -1; /* Ensures the background stays behind the content */
+            opacity: 0.1;
+            z-index: -1;
         }
-    
+
         .card {
             background-color: rgba(255, 255, 255, 0.98);
-            padding: 2rem;
+            padding: 1.5rem;
             text-align: center;
             border-radius: 12px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            max-width: 90%;
-            width: 400px;
+            max-width: 320px; /* Fixed maximum width */
+            width: 100%; /* Ensures responsiveness */
+            margin: auto; /* Centers the card */
         }
 
         .card img {
@@ -77,25 +78,25 @@
 
         @media (min-width: 768px) {
             .card {
-                padding: 1.5rem;
+                padding: 2rem;
+                max-width: 400px; /* Increases for larger devices */
             }
 
             h1 {
-                font-size: 1.5rem;
+                font-size: 1.75rem;
             }
 
             p {
-                font-size: 1rem;
+                font-size: 1.25rem;
             }
 
             button {
-                padding: 0.5rem 1rem;
-                font-size: 1rem;
+                padding: 1rem 2rem;
+                font-size: 1.1rem;
             }
         }
     </style>
     <script>
-        // Redirect to your app's deep link after a delay
         setTimeout(() => {
             window.location.href = "yourapp://";
         }, 2000); // Adjust delay as needed
@@ -103,7 +104,7 @@
 </head>
 <body>
     <div class="card">
-        <img src="assets/Logo.svg" alt="Logo"> <!-- Main centered logo -->
+        <img src="assets/Logo.svg" alt="Logo">
         <h1>Payment Successful!</h1>
         <p>Redirecting you back to the app...</p>
         <button onclick="window.location.href = 'yourapp://';">Go Back to App</button>
